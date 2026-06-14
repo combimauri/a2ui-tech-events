@@ -1,0 +1,95 @@
+.app-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 700;
+  font-size: 1.12rem;
+  color: var(--text);
+  text-decoration: none;
+
+  .brand-mark {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent-text);
+  }
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color var(--t);
+  &:hover { color: var(--text); }
+  &.active { color: var(--text); }
+}
+
+.app-nav .a2ui-btn {
+  min-height: 38px;
+  padding: 0.4rem 0.95rem;
+}
+
+.who {
+  color: var(--muted);
+  font-size: 0.85rem;
+  max-width: 13rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+  padding: 0;
+  transition: color var(--t);
+  &:hover { color: var(--text); }
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--muted);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: color var(--t), border-color var(--t), background var(--t);
+  &:hover { color: var(--text); border-color: var(--border-strong); }
+}
+
+@media (max-width: 520px) {
+  .app-bar { padding: 0.7rem 1rem; }
+  .who { display: none; }
+}

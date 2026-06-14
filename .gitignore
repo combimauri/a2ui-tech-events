@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output / caches
+dist/
+.angular/cache/
+/tmp
+/out-tsc
+
+# Local Claude Code settings (machine-specific)
+.claude/settings.local.json
+
+# Supabase local state
+supabase/.branches/
+supabase/.temp/
+.env
+.env.*
+!.env.example
+
+# System files
+.DS_Store
+Thumbs.db
